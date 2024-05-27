@@ -8,7 +8,7 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     public function index(){
-        $products = Product::with('product_name')->orderBy('created_at', 'desc')->get();
+        $products = Product::all();
         return response()->json($products);
     }
 
